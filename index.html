@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Contacto y Rectángulo Futurista</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #1a1a1a;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #111;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        text-align: center;
+        color: #66d9ef;
+        font-size: 18px;
+        text-transform: none;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 10px;
+        padding: 12px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        background: #222;
+        color: #fff;
+    }
+
+    input[type="submit"] {
+        background: #50fa7b;
+        color: #111;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background: #8be9fd;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .avatar {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .avatar img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 5px solid #50fa7b;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+        }
+
+        iframe {
+            height: 300px;
+        }
+    }
+
+    .whatsapp-icon {
+        color: #25d366;
+        font-size: 24px;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="avatar">
+        <img src="https://avatars.githubusercontent.com/u/50025904?v=4">
+    </div>
+    <h2>◥༒☬𝕵𝖚𝖑𝖎𝖔☬༒◥</h2>
+    <form id="contactForm" action="https://formspree.io/f/mwkgrdoo" method="post">
+        <input type="text" name="name" placeholder="Tu Nombre" required>
+        <input type="tel" name="whatsapp" id="whatsapp" placeholder="Tu Número de WhatsApp" required>
+        <input type="text" name="facebook" id="facebook" placeholder="URL de perfil de Facebook" required>
+        <textarea name="message" placeholder="Tu Mensaje" rows="4" required></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<div class="container">
+    <h2>Los datos de la persona serán enviados al número de <i class="fab fa-whatsapp whatsapp-icon"></i> WhatsApp que proporcionaste arriba mediante un Bot.</h2>
+</div>
+
+<div class="copyright">
+    <p>&copy; 2024 Derechos de Autor. Todos los derechos reservados.</p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Resaltar los campos que deseas restablecer
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Formulario enviado con éxito! ¡Gracias por contactarnos!');
+            form.reset();
+        });
+    });
+</script>
+
+</body>
+</html>
